@@ -38,3 +38,21 @@ f1.close() # 열린 파일 객체를 닫는다.
 f2 = open("test.txt", 'r')
 print(f2.read())
 f2.close()
+
+#q6
+user_input = input("저장할 내용을 입력하세요:")
+f = open('test.txt', 'a')   # 내용을 추가하기 위해서 'a'를 사용
+f.write(user_input)
+f.write("\n")               # 입력된 내용을 줄 단위로 구분하기 위해 줄 바꿈 문자 삽입
+f.close()
+
+#q7
+f = open('test.txt', 'r')
+body = f.read()
+f.close()
+
+body = body.replace('java', 'python')
+
+f = open('test.txt', 'w')
+f.write(body)
+f.close()
